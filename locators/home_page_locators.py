@@ -23,3 +23,4 @@ class HomePageLocators:
     SIXTH_ANSWER = [By.XPATH, '//div[@id="accordion__panel-5"]/p']
     SEVENTH_ANSWER = [By.XPATH, '//div[@id="accordion__panel-6"]/p']
     EIQGHTH_ANSWER = [By.XPATH, '//div[@id="accordion__panel-7"]/p']
+

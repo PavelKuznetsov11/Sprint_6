@@ -33,3 +33,4 @@ class BasePage:
 
     def wait_to_load_page_order(self):
         WebDriverWait(self.driver, 5).until(EC.visibility_of_element_located(tuple(BPL.TITLE_HEADER)))
+

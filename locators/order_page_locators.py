@@ -25,3 +25,5 @@ class OrderPageLocators:
     TITLE_ORDER_CONFIRMED = [By.XPATH, 
                              '//div[contains(@class, "Order_ModalHeader") and contains(text(), "Заказ оформлен")]']
     BUTTON_VIEW_STATUS = [By.XPATH, '//button[contains(text(), "Посмотреть статус")]']
+
+    
