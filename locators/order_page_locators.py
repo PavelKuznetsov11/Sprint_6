@@ -26,4 +26,5 @@ class OrderPageLocators:
                              '//div[contains(@class, "Order_ModalHeader") and contains(text(), "Заказ оформлен")]']
     BUTTON_VIEW_STATUS = [By.XPATH, '//button[contains(text(), "Посмотреть статус")]']
 
-    
+    DZEN = [By.XPATH, '//div[contains(@class, "dzen")]']
+
