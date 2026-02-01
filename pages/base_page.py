@@ -1,4 +1,5 @@
 from locators.base_page_locators import BasePageLocators as BPL
+from urls import Urls
 
 
 from selenium.webdriver.support import expected_conditions as EC
@@ -21,8 +22,9 @@ class BasePage:
     def wait_element(self, locator):
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(tuple(locator)))
 
+    @allure.step('Ожидание новой вкладки')
     def wait_new_tab(self, logo):
-        WebDriverWait(self.driver, 10).until(EC.url_contains(logo))
+        WebDriverWait(self.driver, 15).until(EC.url_contains(logo))
 
     @allure.step('Находим элемента')
     def find_element(self, locator):
@@ -35,10 +37,8 @@ class BasePage:
         return element.text
 
     @allure.step('Нажимаем на элемент')
-    def click_to_element(self, locator):
-    
-        self.driver.find_element(*locator).click()
-        # self.driver.execute_script("arguments[0].click();", element)        
+    def click_to_element(self, locator):   
+        self.driver.find_element(*locator).click()   
 
     @allure.step('Заполняем поле')
     def fill_element(self, locator, value):

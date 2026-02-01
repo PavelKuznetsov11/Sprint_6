@@ -40,9 +40,8 @@ class TestOrderScooter:
         order_page.wait_logo(logo)
         order_page.click_to_logo(logo)
 
-        if url_logo in Urls.DZEN_PAGE_URL:
-            order_page.switch_tab()
-            order_page.new_tab(url_logo)
+        order_page.switch_tab()
+        order_page.new_tab(url_logo)
 
     
         assert url_logo in home_driver.current_url

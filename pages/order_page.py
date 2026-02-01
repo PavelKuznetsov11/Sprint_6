@@ -92,9 +92,9 @@ class OrderPage(BasePage):
         self.click_to_element(logo)
 
     @allure.step('Переходим на последнюю открытую вкладку, ожидаем загрузки новой вкладки')
-    def new_tab(self, logo):
+    def new_tab(self, url_logo):
         self.switch_tab()
-        self.wait_new_tab(logo)
+        self.wait_new_tab(url_logo)
 
     
     @allure.step('Ожидаем загрузки страницы, заполняем имя, ' \
